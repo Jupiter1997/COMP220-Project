@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="LibraryStyles.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="divBanner">
+               <h1>Shalom Library Collection Webpage</h1>
+
+        </div>
+    <div id="divMasterContent">
+        <asp:Menu ID="MenuNav" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Larger" ForeColor="#990000" StaticSubMenuIndent="10px" Orientation="Horizontal">
+            <DynamicHoverStyle BackColor="#990000" ForeColor="White"></DynamicHoverStyle>
+
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px"></DynamicMenuItemStyle>
+
+            <DynamicMenuStyle BackColor="#FFFBD6"></DynamicMenuStyle>
+
+            <DynamicSelectedStyle BackColor="#FFCC66"></DynamicSelectedStyle>
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Books.aspx" Text="Books" Value="Books"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/AddBook.aspx" Text="AddBook" Value="AddBook"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Search.aspx" Text="Search" Value="Search"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#990000" ForeColor="White"></StaticHoverStyle>
+
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px"></StaticMenuItemStyle>
+
+            <StaticSelectedStyle BackColor="#FFCC66"></StaticSelectedStyle>
+        </asp:Menu>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+           
+        </asp:ContentPlaceHolder>
+         <footer><h6>&copy;&nbsp; Marvin Jupiter Vargas - 300901192 - Centennial College - COMP229</h6></footer>
+   
+    </div>
+    </form>
+</body>
+</html>
