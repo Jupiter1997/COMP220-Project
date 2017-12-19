@@ -36,3 +36,11 @@ h3{
     border-radius: 10px;
     border: 2px solid #73AD21;
 }
+.tblrightAl{
+    text-align:right;
+    width:200px;
+
+}
+.btnRow{
+    text-align:center;
+}

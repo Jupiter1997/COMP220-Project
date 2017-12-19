@@ -2,8 +2,6 @@
 
 <%@ Register Src="~/SmartBox.ascx" TagPrefix="uc" TagName="SmartBox" %>
 
-
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     
 </asp:Content>
@@ -11,49 +9,19 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
   
     <uc:SmartBox runat="server" ID="SmartBox" />
-
+    
      <div id="divAddbook">
          <table style="width: 100%;">
-             <tr>
-                 <th></th>
-                   <th></th>
-             </tr>
-             <tr>
-                 <td>Title: </td>
-                 <td><asp:TextBox ID="txtTitle" runat="server" MaxLength="50" Width="250px"></asp:TextBox>                   
-                 </td>
-                   <td><asp:RequiredFieldValidator ID="titleRequired" runat="server" ControlToValidate="txtTitle" 
-                     ErrorMessage="Title field is mandatory"
-                     ></asp:RequiredFieldValidator></td>
-                
-             </tr>
-             <tr>
-                 <td>Author(s):</td>
-                 <td><asp:TextBox ID="txtAuthor" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>  
-                <td><asp:RequiredFieldValidator ID="authorRequired" runat="server" ControlToValidate="txtAuthor" 
-                     ErrorMessage=" One author is mandatory" Display="Dynamic"
-                     ></asp:RequiredFieldValidator></td>
-             </tr>
+
+            
               <tr>
-                 <td></td>
-                 <td><asp:TextBox ID="txtAuthor1" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
-             </tr>
-              <tr>
-                 <td></td>
-                 <td><asp:TextBox ID="txtAuthor2" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
-             </tr>
-               <tr>
-                 <td>ISBN No.</td>
-                 <td><asp:TextBox ID="txtISBN" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>
-                 <td>&nbsp;</td>
-             </tr>
-              <tr>
-                 <td>Genre:</td>
+                 <td class="tblrightAl">
+                     <asp:Label ID="Label1" runat="server" Text="Genre"></asp:Label></td>
                  <td><asp:TextBox ID="txtGenre" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>
                  <td>&nbsp;</td>
              </tr>
               <tr>
-                 <td>No. of Pages:</td>
+                 <td class="tblrightAl">No. of Pages:</td>
                  <td><asp:TextBox ID="txtNoofPages" runat="server" MaxLength="5" Width="250px"></asp:TextBox></td>
                  <td>
                      <asp:RangeValidator ID="NumPageRequired" runat="server" ControlToValidate="txtNoofPages"
@@ -61,7 +29,7 @@
                          ErrorMessage="Pages must be a positive number" Display="Dynamic"></asp:RangeValidator></td>
              </tr>
              <tr>
-                 <td>Lent to a friend?</td>
+                 <td class="tblrightAl">Lent to a friend?</td>
                  <td>
                      <asp:RadioButtonList ID="radlistLent" runat="server" AutoPostBack="True" RepeatDirection="Horizontal"
                           OnSelectedIndexChanged="radlistLent_SelectedIndexChanged">
@@ -72,7 +40,7 @@
                  <td>&nbsp;</td>
              </tr>
              <tr>
-                 <td>Friend's name:</td>
+                 <td class="tblrightAl">Friend's name:</td>
                  <td><asp:TextBox ID="txtFriendName" runat="server" MaxLength="50" Width="250px"></asp:TextBox>
 
                  </td>
@@ -83,35 +51,18 @@
              </tr>
              
               <tr>
-                 <td>Comments: </td>
+                 <td class="tblrightAl">Comments: </td>
                  <td><textarea id="TextArea1" cols="20" rows="2"></textarea></td>
                  <td>&nbsp;</td>
              </tr>
              <tr>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;<asp:Button ID="btnSubmit" runat="server" Text="Add Book" OnClick="btnSubmit_Click" /></td>
+                 <td colspan="3" class="btnRow">&nbsp;<asp:Button ID="btnSubmit" runat="server" Text="Save" OnClick="btnSubmit_Click" Height="30px" Width="60px" />
+                     &nbsp;<asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnSubmit_Click" Height="30px" Width="60px" />
+                 </td>
            
              </tr>
          </table>
 
-       <%--  <table style="width: 100%;">
-             <tr>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;</td>
-             </tr>
-             <tr>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;</td>
-             </tr>
-             <tr>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;</td>
-                 <td>&nbsp;</td>
-             </tr>
-         </table>--%>
-       
 
        
     </div>

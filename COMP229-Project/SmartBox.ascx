@@ -46,15 +46,39 @@
         }
     }
 </script>
-<p>
-    <asp:Label ID="lblTitle" runat="server" Text="Label"></asp:Label>
-    <asp:TextBox ID="txtTitle" runat="server"></asp:TextBox>
+
+
+<table style="width: 100%;">
+         <tr>
+                 <td class="tblrightAl"><asp:Label ID="lblTitle" runat="server" Text="Title"></asp:Label></td>
+                 <td><asp:TextBox ID="txtTitle" runat="server" MaxLength="50" Width="250px"></asp:TextBox>                
+                 </td>
+                   <td><asp:RequiredFieldValidator ID="titleRequired" runat="server" ControlToValidate="txtTitle" 
+                     ErrorMessage="Title field is mandatory"
+                     ></asp:RequiredFieldValidator></td>
+                
+             </tr>
+             <tr>
+                 <td class="tblrightAl"> <asp:Label ID="lblAuthor" runat="server" Text="Author(s):"></asp:Label></td>
+                 <td>    <asp:TextBox ID="txtAuthor" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>  
+                <td><asp:RequiredFieldValidator ID="authorRequired" runat="server" ControlToValidate="txtAuthor" 
+                     ErrorMessage=" One author is mandatory" Display="Dynamic"
+                     ></asp:RequiredFieldValidator></td>
+             </tr>
+      <tr>
+                 <td class="tblrightAl"></td>
+                 <td><asp:TextBox ID="txtAuthor1" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
+             </tr>
+              <tr>
+                 <td class="tblrightAl"></td>
+                 <td><asp:TextBox ID="txtAuthor2" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
+             </tr>
+               <tr>
+                 <td class="tblrightAl"><asp:Label ID="lblISBN" runat="server" Text="ISBN No.:"></asp:Label></td>
+                 <td><asp:TextBox ID="txtISBN" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>
+                 <td>&nbsp;</td>
+             </tr>
+
+</table>
+
       
-      <asp:Label ID="lblAuthor" runat="server" Text="Label"></asp:Label>
-    <asp:TextBox ID="txtAuthor" runat="server"></asp:TextBox>
-
-        <asp:Label ID="lblISBN" runat="server" Text="Label"></asp:Label>
-    <asp:TextBox ID="txtISBN" runat="server"></asp:TextBox>
-
-
-</p>
