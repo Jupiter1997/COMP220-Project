@@ -16,24 +16,24 @@ public partial class AddBook : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        //if (radLentYes.Checked)
-        //{
-        //    txtTitle.Text = "DonZ000O!";
-        //}
-        //if (Page.IsValid)
-        //{
-        //    txtTitle.Text = "DonZO!"; 
-        //}
+        if (Page.IsValid)
+        {
+
+        }
+     
     }
 
 
-
-
-
-    protected void radLentYes_CheckedChanged(object sender, EventArgs e)
+    protected void radlistLent_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+        if (radlistLent.SelectedValue == "Yes")
+        {
+            txtFriendName.Enabled = true;
+            FriendNameReq.Enabled = true;
+        }else
+        {
+            txtFriendName.Enabled = false;
+            FriendNameReq.Enabled = false;
+        }
     }
-  
-   
 }

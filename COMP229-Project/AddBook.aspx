@@ -1,10 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AddBook.aspx.cs" Inherits="AddBook" %>
 
+<%@ Register Src="~/SmartBox.ascx" TagPrefix="uc" TagName="SmartBox" %>
+
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
   
+    <uc:SmartBox runat="server" ID="SmartBox" />
+
      <div id="divAddbook">
          <table style="width: 100%;">
              <tr>
@@ -22,22 +29,27 @@
              </tr>
              <tr>
                  <td>Author(s):</td>
-                 <td><asp:TextBox ID="txtAuthor1" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>  
-                <td><asp:RequiredFieldValidator ID="authorRequired" runat="server" ControlToValidate="txtAuthor1" 
+                 <td><asp:TextBox ID="txtAuthor" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>  
+                <td><asp:RequiredFieldValidator ID="authorRequired" runat="server" ControlToValidate="txtAuthor" 
                      ErrorMessage=" One author is mandatory" Display="Dynamic"
                      ></asp:RequiredFieldValidator></td>
              </tr>
               <tr>
                  <td></td>
-                 <td><asp:TextBox ID="txtAuthor2" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
+                 <td><asp:TextBox ID="txtAuthor1" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
              </tr>
               <tr>
                  <td></td>
-                 <td><asp:TextBox ID="txtAuthor3" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
+                 <td><asp:TextBox ID="txtAuthor2" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>              
              </tr>
                <tr>
                  <td>ISBN No.</td>
                  <td><asp:TextBox ID="txtISBN" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>
+                 <td>&nbsp;</td>
+             </tr>
+              <tr>
+                 <td>Genre:</td>
+                 <td><asp:TextBox ID="txtGenre" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>
                  <td>&nbsp;</td>
              </tr>
               <tr>
@@ -51,8 +63,11 @@
              <tr>
                  <td>Lent to a friend?</td>
                  <td>
-                     <asp:RadioButton ID="radLentYes" runat="server" GroupName="LentFriend" /> &nbsp;Yes
-                     <asp:RadioButton ID="radLentNo" runat="server" GroupName="LentFriend"/>&nbsp;No
+                     <asp:RadioButtonList ID="radlistLent" runat="server" AutoPostBack="True" RepeatDirection="Horizontal"
+                          OnSelectedIndexChanged="radlistLent_SelectedIndexChanged">
+                         <asp:ListItem>Yes</asp:ListItem>
+                         <asp:ListItem>No</asp:ListItem>
+                     </asp:RadioButtonList>
                  </td>
                  <td>&nbsp;</td>
              </tr>
