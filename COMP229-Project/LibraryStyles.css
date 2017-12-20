@@ -38,6 +38,12 @@ h3{
     border: 2px solid #73AD21;
     padding: 20px; 
 }
+#divAddbook{
+     background:#FFFBD6;
+     border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+}
 #MenuNav{
     border-radius: 10px;
     border: 2px solid #73AD21;
@@ -60,5 +66,8 @@ h3{
     height: 50px;
      background-color: #43c6ac;
  
+}
+h3{
+
 }
 

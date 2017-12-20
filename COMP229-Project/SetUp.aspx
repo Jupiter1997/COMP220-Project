@@ -7,5 +7,10 @@
     <asp:Button ID="btnDark" runat="server" Text="Dark" OnClick="btnDark_Click" />
     <asp:Button ID="btnLight" runat="server" Text="Light" OnClick="btnLight_Click" />
 
+    <asp:DropDownList ID="ddlTheme" runat="server" OnSelectedIndexChanged="ddlTheme_SelectedIndexChanged">
+        <asp:ListItem>Dark</asp:ListItem>
+        <asp:ListItem>Light</asp:ListItem>
+    </asp:DropDownList>
+
 </asp:Content>
 

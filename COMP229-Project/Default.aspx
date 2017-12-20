@@ -13,5 +13,10 @@
          available through this website and also users can add books to their collection.</p>
   </div>
     <a href="SetUp.aspx">Theme</a>
+        <asp:DropDownList ID="ddlTheme" runat="server" OnSelectedIndexChanged="ddlTheme_SelectedIndexChanged" AutoPostBack="true">
+        <asp:ListItem>Dark</asp:ListItem>
+        <asp:ListItem>Light</asp:ListItem>
+    </asp:DropDownList>
+
 </asp:Content>
 

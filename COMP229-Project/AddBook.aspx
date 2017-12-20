@@ -8,9 +8,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
   
-    <uc:SmartBox runat="server" ID="SmartBox" />
+   <h2>Add a Book</h2>
     
      <div id="divAddbook">
+          <uc:SmartBox runat="server" ID="SmartBox" />
          <table style="width: 100%;">
 
             
