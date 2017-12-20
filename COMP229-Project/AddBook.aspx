@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AddBook.aspx.cs" Inherits="AddBook" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AddBook.aspx.cs" Inherits="AddBook"%>
 
 <%@ Register Src="~/SmartBox.ascx" TagPrefix="uc" TagName="SmartBox" %>
 
@@ -16,7 +16,7 @@
             
               <tr>
                  <td class="tblrightAl">
-                     <asp:Label ID="Label1" runat="server" Text="Genre"></asp:Label></td>
+                     <asp:Label ID="lblGenre" runat="server" Text="Genre"></asp:Label></td>
                  <td><asp:TextBox ID="txtGenre" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>
                  <td>&nbsp;</td>
              </tr>

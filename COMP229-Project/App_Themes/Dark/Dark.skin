@@ -12,4 +12,10 @@ Default skin template. The following skins are provided as examples only.
    control skin per control type is allowed in the same theme.
 
 <asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
+ <asp:TextBox runat="server" ForeColor="#663300" SkinID="txtDark"></asp:TextBox>
+    <asp:Label  runat="server"  ForeColor="#FFFFE8" SkinID="lblDark" ></asp:Label>
+    <asp:Button  runat="server" BackColor="Yellow" ForeColor="#003366" SkinID="btnDark"/>
+
 --%>
+   
