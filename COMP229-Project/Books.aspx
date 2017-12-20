@@ -3,10 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   <div>
+    <h2>Books Page</h2>
+   <div id="divBook">
        <h3>Book Collection</h3>
        <p>
-           <asp:ListView ID="BookListView" runat="server" DataSourceID="ObjectDataSource1">
+           <asp:ListView ID="BookListView" runat="server" DataSourceID="ObjectDataSource1" ValidateRequestMode="Inherit" style="margin-left:auto;">
                <AlternatingItemTemplate>
                    <tr style="background-color: #FFFFFF; color: #284775;">
                        <td>
@@ -32,9 +33,10 @@
                    </tr>
                </EditItemTemplate>
                <EmptyDataTemplate>
-                   <table runat="server" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px;">
+                   <table runat="server" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px;
+">
                        <tr>
-                           <td>No data was returned.</td>
+                           <td>No books in the collection.</td>
                        </tr>
                    </table>
                </EmptyDataTemplate>
@@ -63,10 +65,10 @@
                    </tr>
                </ItemTemplate>
                <LayoutTemplate>
-                   <table runat="server">
+                   <table runat="server" class="BookListView" >
                        <tr runat="server">
                            <td runat="server">
-                               <table runat="server" id="itemPlaceholderContainer" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px; font-family: Verdana, Arial, Helvetica, sans-serif;" border="1">
+                               <table runat="server" id="itemPlaceholderContainer" class="BookListView" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px; font-family: Verdana, Arial, Helvetica, sans-serif;" border="1">
                                    <tr runat="server" style="background-color: #E0FFFF; color: #333333;">
                                        <th runat="server">Title</th>
                                        <th runat="server">Author</th>

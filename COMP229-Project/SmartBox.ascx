@@ -76,7 +76,8 @@
                <tr>
                  <td class="tblrightAl"><asp:Label ID="lblISBN" runat="server" Text="ISBN No.:"></asp:Label></td>
                  <td><asp:TextBox ID="txtISBN" runat="server" MaxLength="50" Width="250px"></asp:TextBox></td>
-                 <td>&nbsp;</td>
+                 <td>
+                     <asp:CompareValidator ID="ISBNVal" runat="server" ErrorMessage="Enter a number in this field" ControlToValidate="txtISBN" Type="Integer" Operator="DataTypeCheck"></asp:CompareValidator></td>
              </tr>
 
 </table>
