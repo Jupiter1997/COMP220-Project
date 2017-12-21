@@ -34,10 +34,9 @@
     {
         get
         {
-             int test;
-
-            test = Convert.ToInt32(txtISBN.Text);
+            int test = Convert.ToInt32(txtISBN.Text);
             return test;
+            //   return Convert.ToInt32(txtISBN.Text);
         }
     }
     public int ISBN_lbl
@@ -47,7 +46,7 @@
             int test;
 
             test = Convert.ToInt32(lblISBN.Text);
-             test= value;
+            test= value;
         }
     }
 </script>
