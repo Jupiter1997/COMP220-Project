@@ -53,7 +53,7 @@
              
               <tr>
                  <td class="tblrightAl">Comments: </td>
-                 <td><textarea id="TextArea1" cols="20" rows="2"></textarea></td>
+                 <td><textarea id="txtAreaComments" cols="20" rows="2" runat="server"></textarea></td>
                  <td>&nbsp;</td>
              </tr>
              <tr>
