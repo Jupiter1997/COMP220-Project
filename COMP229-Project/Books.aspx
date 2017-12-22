@@ -123,7 +123,7 @@
 
                <SortedDescendingHeaderStyle BackColor="#6F8DAE"></SortedDescendingHeaderStyle>
            </asp:GridView>
-           <asp:DataList ID="BookDetails" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
+     <%--      <asp:DataList ID="BookDetails" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
                <AlternatingItemStyle BackColor="#F7F7F7"></AlternatingItemStyle>
 
                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C"></FooterStyle>
@@ -137,7 +137,7 @@
            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
           
            
-           <asp:ListView ID="BookListView" runat="server" DataSourceID="SqlDataSource2">
+           <asp:ListView ID="BookListView" runat="server">
                <AlternatingItemTemplate>
                    <tr style="background-color: #FFF8DC;">
                        <td>
@@ -287,7 +287,7 @@
                            <asp:Label Text='<%# Eval("Comments") %>' runat="server" ID="CommentsLabel" /></td>
                    </tr>
                </SelectedItemTemplate>
-           </asp:ListView>
+           </asp:ListView>--%>
 
 
            <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:ShalomLibrary %>' SelectCommand="SELECT * FROM [Book]"></asp:SqlDataSource>

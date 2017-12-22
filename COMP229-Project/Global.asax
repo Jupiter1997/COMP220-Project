@@ -6,6 +6,7 @@
     {
         List<Book> bookList = new List<Book>();
         Application["bookList"] = bookList;
+        int selectedindex;
   
  
 
