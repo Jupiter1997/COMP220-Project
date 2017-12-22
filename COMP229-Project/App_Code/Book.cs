@@ -19,7 +19,7 @@ public class Book
     }
     private string _title;
     private string _author;
-    private int _isbn;
+    private string _isbn;
 
 
     public string Title
@@ -44,7 +44,7 @@ public class Book
             _author = value;
         }
     }
-    public int ISBN
+    public string ISBN
     {
         get
         {

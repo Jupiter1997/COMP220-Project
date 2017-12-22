@@ -30,23 +30,39 @@
         }
 
     }
-    public int ISBN_txt
+    //public int ISBN_txt
+    //{
+    //    get
+    //    {
+    //        int test = Convert.ToInt32(txtISBN.Text);
+    //        return test;
+    //        //   return Convert.ToInt32(txtISBN.Text);
+    //    }
+    //}
+    //public int ISBN_lbl
+    //{
+    //    set
+    //    {
+    //        int test;
+
+    //        test = Convert.ToInt32(lblISBN.Text);
+    //        test= value;
+    //    }
+    //}
+    public string ISBN_txt
     {
         get
         {
-            int test = Convert.ToInt32(txtISBN.Text);
-            return test;
-            //   return Convert.ToInt32(txtISBN.Text);
+            return txtISBN.Text;
+
         }
     }
-    public int ISBN_lbl
+    public string ISBN_lbl
     {
         set
         {
-            int test;
 
-            test = Convert.ToInt32(lblISBN.Text);
-            test= value;
+            lblISBN.Text= value;
         }
     }
 </script>

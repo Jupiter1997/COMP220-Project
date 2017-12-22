@@ -30,53 +30,55 @@ public partial class AddBook : System.Web.UI.Page
         string lentToFriend = radlistLent.Text;
         string friendName = txtFriendName.Text;
         string comments = txtAreaComments.Value;
-         int ISBN = Convert.ToInt32(SmartBox.ISBN_txt);
-        int noOfPages = Convert.ToInt32(txtNoofPages.Text);
+        string ISBN = SmartBox.ISBN_txt;
+        string noOfPages = txtNoofPages.Text;
+        //int ISBN = Convert.ToInt32(SmartBox.ISBN_txt);
+        //int noOfPages = Convert.ToInt32(txtNoofPages.Text);
 
 
         SqlConnection conn;
         SqlCommand comm;
-        SqlDataReader reader;
+        //SqlDataReader reader;
         string connectionString =
             ConfigurationManager.ConnectionStrings["ShalomLibrary"].ConnectionString;
         conn = new SqlConnection(connectionString);
-        comm = new SqlCommand("Insert into [Book]([Title], [Author],[ISBN],[Genre]," +
-            "[NoOfPages],[LentToFriend,[FriendName],[Comments]) Values('@Title','@Author','@ISBN','@Genre','@NoOfPages','@LentToFriend','@)FriendName','@Comments')", conn);
-        comm.Parameters.Add("@Title", SqlDbType.NVarChar);
-        comm.Parameters["@Title"].Value = title;
-        comm.Parameters.Add("@Author", SqlDbType.NVarChar);
-        comm.Parameters["@Author"].Value = author;
-        comm.Parameters.Add("@ISBN", SqlDbType.Int);
-        comm.Parameters["@ISBN"].Value = ISBN;
-        comm.Parameters.Add("@Genre", SqlDbType.NVarChar);
-        comm.Parameters["@Genre"].Value = genre;
-        comm.Parameters.Add("@NoOfPages", SqlDbType.Int);
-        comm.Parameters["@NoOfPages"].Value = noOfPages;
-        comm.Parameters.Add("@LentToFriend", SqlDbType.NVarChar);
-        comm.Parameters["@LentToFriend"].Value = lentToFriend;
-        comm.Parameters.Add("@FriendName", SqlDbType.NVarChar);
-        comm.Parameters["@FriendName"].Value = friendName;
-        comm.Parameters.Add("@Comments", SqlDbType.NVarChar);
-        comm.Parameters["@Comments"].Value = comm;
+        comm = new SqlCommand("INSERT INTO [Book](Title, Author, ISBN, Genre, NoOfPages, LentToFriend, FriendName, Comments) VALUES (@Title, @Author, @ISBN, @Genre, @NoOfPages, @LentToFriend, @FriendName, @Comments)", conn);
+        comm.Parameters.Add("@Title", SqlDbType.NVarChar).Value = title;
+     
+        comm.Parameters.Add("@Author", SqlDbType.NVarChar).Value = author;
+       
+        comm.Parameters.Add("@ISBN", SqlDbType.NVarChar).Value = ISBN;
+
+        comm.Parameters.Add("@Genre", SqlDbType.NVarChar).Value = genre;
+
+        comm.Parameters.Add("@NoOfPages", SqlDbType.NVarChar).Value = noOfPages;
+
+        comm.Parameters.Add("@LentToFriend", SqlDbType.NVarChar).Value = lentToFriend;
+
+        comm.Parameters.Add("@FriendName", SqlDbType.NVarChar).Value = friendName;
+
+        comm.Parameters.Add("@Comments", SqlDbType.NVarChar).Value = comments;
+
+
+
+
+
         try
         {
             conn.Open();
             comm.ExecuteNonQuery();
-            lblerror.Text = "Added to SQL";
+         //   lblerror.Text = "Added to SQL";
             
         }
-        catch
-        {
-            lblerror.Text = "KING INA MO!";
-        }
       
+
         finally
         {
-           
+
             conn.Close();
         }
     }
-  
+
 
 
     protected void btnSubmit_Click(object sender, EventArgs e)
@@ -91,9 +93,9 @@ public partial class AddBook : System.Web.UI.Page
                 ISBN = SmartBox.ISBN_txt
             });
             BindData();
-            lblerror.Text = "Mahal kita";
+         
         }
-      //  Response.Redirect("Books.aspx");
+        Response.Redirect("Books.aspx");
      
     }
  
