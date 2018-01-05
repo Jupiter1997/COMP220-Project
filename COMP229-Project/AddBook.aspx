@@ -11,7 +11,8 @@
    <h2>Add a Book</h2>
     
      <div id="divAddbook">
-          <uc:SmartBox runat="server" ID="SmartBox" />
+          <uc:SmartBox runat="server" ID="SmartBox" /><br />
+
          <table style="width: 100%;">
 
             
@@ -62,7 +63,7 @@
                  </td>
            
              </tr>
-             <asp:Label ID="lblerror" runat="server" Text="Label"></asp:Label>
+          
          </table>
 
 

@@ -5,12 +5,26 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div id="divBook">
     <asp:Label ID="Label1" runat="server" Text="Search By Genre:"></asp:Label>
-        <asp:TextBox ID="txtGenreS" runat="server"></asp:TextBox>
+         <asp:DropDownList ID="ddGenre" runat="server">
+        </asp:DropDownList>
     <asp:Button ID="Button1" runat="server" Text="Search" OnClick="Button1_Click" /><br />
         <asp:Label ID="Label2" runat="server" Text="Search by Firend's Name:"></asp:Label>
-    <asp:TextBox ID="txtFriedS" runat="server"></asp:TextBox>
-    <asp:Button ID="Button2" runat="server" Text="Button" OnClick="Button2_Click" />
+    <asp:DropDownList ID="ddFriend" runat="server">
+                 
+        </asp:DropDownList>
+    <asp:Button ID="Button2" runat="server" Text="Search" OnClick="Button2_Click" /><br />
 
+
+      
+                
+
+        <asp:Button ID="btnShowAdd" runat="server" Text="Add A Genre" OnClick="btnShowAdd_Click" />
+
+
+                <asp:Label ID="lblAddGenre" runat="server" Text="Add a Genre:" Visible="false"></asp:Label>       
+    <asp:TextBox ID="txtAddGenre" runat="server" Visible="false"></asp:TextBox>
+    <asp:Button ID="btnAddGenre" runat="server" Text="Add Genre" OnClick="Button3_Click" Visible="False" /><br />
+         <br />
         <asp:ListView ID="SearchListView" runat="server">
             <AlternatingItemTemplate>
                 <span style="background-color: #FFFFFF; color: #284775;">BookID:

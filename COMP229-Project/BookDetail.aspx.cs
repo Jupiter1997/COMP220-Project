@@ -12,6 +12,7 @@ public partial class BookDetail : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
         int bookID = (int)Session["Selectedbook"];
      
         SqlConnection conn;
@@ -68,5 +69,10 @@ public partial class BookDetail : System.Web.UI.Page
             conn.Close();
         }
 
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("UpdateBook.aspx");
     }
 }

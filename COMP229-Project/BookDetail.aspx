@@ -162,12 +162,29 @@
 
         </SelectedItemTemplate>
     </asp:ListView>
+
+   <%--     <asp:DetailsView ID="DVtest" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataSourceID="SqlDataSource1">
+            <Fields>
+                <asp:TemplateField HeaderText="Title"></asp:TemplateField>
+                <asp:TemplateField HeaderText="Author"></asp:TemplateField>
+                <asp:TemplateField HeaderText="ISBN"></asp:TemplateField>
+                <asp:TemplateField HeaderText="Genre"></asp:TemplateField>
+                <asp:TemplateField HeaderText="No. of Pages"></asp:TemplateField>
+                <asp:TemplateField HeaderText="Friend Name"></asp:TemplateField>
+                <asp:TemplateField HeaderText="Comments"></asp:TemplateField>
+                <asp:TemplateField HeaderText="Extention"></asp:TemplateField>
+                <asp:CommandField ShowEditButton="True"></asp:CommandField>
+            </Fields>
+        </asp:DetailsView>--%>
+
+
+
         <asp:Label ID="lblmessage" runat="server" Text=""></asp:Label>
-            <asp:Button ID="Delete" runat="server" Text="Delete" Height="32px" OnClick="Delete_Click" Width="68px" /><br />
+            <asp:Button ID="Delete" runat="server" Text="Delete" Height="35px" OnClick="Delete_Click" Width="70px" />&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="Update" Height="35px" Width="70px" OnClick="Button1_Click" />
         <a href="Books.aspx" style="text-align:right;">Back to Books Collection</a>
 
-        </div>
-
     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:ShalomLibraryConnectionString %>' SelectCommand="SELECT * FROM [Book]"></asp:SqlDataSource>
+    </div>
 </asp:Content>
 
